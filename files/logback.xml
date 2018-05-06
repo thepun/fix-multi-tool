@@ -1,0 +1,33 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d %level %logger{10} - %m%n</Pattern>
+        </layout>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%m%n</Pattern>
+        </layout>
+        <file>out.txt</file>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <logger name="OUT_FILE" level="ALL" additivity="false">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <!-- fix -->
+    <logger name="io.github.thepun.fix.multitool.client.fix" level="TRACE" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="org.apache.mina" level="TRACE" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="quickfix" level="TRACE" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+</configuration>

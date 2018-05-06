@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile(project(":api"))
+    compileOnly group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'org.quickfixj', name: 'quickfixj-messages-fix44', version: '2.0.0'
+    compile group: 'org.quickfixj', name: 'quickfixj-core', version: '2.0.0'
+}

@@ -1,0 +1,3 @@
+rootProject.name = 'fix-multi-tool'
+
+include 'fix', 'api', 'core', 'client', 'cases', 'runner'

@@ -1,0 +1,10 @@
+group 'com.squaredfinancial'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile(project(":api"))
+    compile(project(":client"))
+}
