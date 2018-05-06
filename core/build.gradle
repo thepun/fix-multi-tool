@@ -1,4 +1,4 @@
 dependencies {
     compile(project(":api"))
-    compileOnly group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compileOnly group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
 }
